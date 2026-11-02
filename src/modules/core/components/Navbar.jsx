@@ -1,4 +1,3 @@
-// core/components/Navbar.jsx
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../auth/hooks/useAuth';
 import Boton from '../design-system/Boton';

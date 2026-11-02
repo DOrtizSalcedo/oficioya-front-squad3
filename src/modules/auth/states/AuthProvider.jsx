@@ -1,10 +1,9 @@
-// auth/states/AuthProvider.jsx
 import { useCallback, useState } from 'react';
 import { AuthContext } from './AuthContext';
 import * as authService from '../services/authService';
 
 export function AuthProvider({ children }) {
-    // El token vive solo en memoria: si se recarga la página, hay que iniciar sesión de nuevo
+    // Token vive en memoria pero si se recarga la página, se inicia sesión de nuevo
     const [token, setToken] = useState(null);
     const [usuario, setUsuario] = useState(null);
 

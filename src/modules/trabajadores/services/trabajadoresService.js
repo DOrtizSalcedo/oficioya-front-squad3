@@ -1,4 +1,3 @@
-// trabajadores/services/trabajadoresService.js
 import { request } from '../../core/lib/httpClient';
 
 export function listarTrabajadores(token) {
