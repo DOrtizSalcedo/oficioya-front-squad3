@@ -1,4 +1,3 @@
-// Boton.jsx
 import styles from './Boton.module.css';
 
 function Boton({ children, variante = 'primario', ...props }) {

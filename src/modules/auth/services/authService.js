@@ -1,4 +1,3 @@
-// auth/services/authService.js
 import { request } from '../../core/lib/httpClient';
 
 export function login(correo, password) {
