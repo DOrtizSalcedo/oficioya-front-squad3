@@ -1,9 +1,10 @@
-// App.jsx (versión inicial: las pantallas de los módulos son textos temporales)
+// Versión inicial del front
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { AuthProvider } from './modules/auth/states/AuthProvider';
 import LoginPage from './modules/auth/components/LoginPage';
 import RutaProtegida from './modules/core/components/RutaProtegida';
 import TrabajadorDetallePage from './modules/trabajadores/components/TrabajadorDetallePage';
+import TrabajadoresPage from "./modules/trabajadores/components/TrabajadoresPage.jsx";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
           <Routes>
             <Route path="/login" element={<LoginPage />} />
             <Route element={<RutaProtegida />}>
-              <Route path="/trabajadores" element={<p>Bloque 2: lista de trabajadores</p>} />
+              <Route path="/trabajadores" element={<TrabajadoresPage />} />
               <Route path="/trabajadores/:id" element={<TrabajadorDetallePage />} />
               <Route path="/solicitudes" element={<p>Bloque 4: mis solicitudes</p>} />
             </Route>

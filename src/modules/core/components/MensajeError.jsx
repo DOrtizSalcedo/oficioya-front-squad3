@@ -1,4 +1,3 @@
-// core/components/MensajeError.jsx
 function MensajeError({ error }) {
     if (!error) {
         return null;
