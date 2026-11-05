@@ -4,6 +4,8 @@
 
 ### ¿Por qué la carga de datos va dentro de `useEffect` y no directamente en el cuerpo del componente?
 
-Porque el cuerpo del componente se vuelve a ejecutar cada vez que React lo renderiza. Si pusiéramos la petición ahí, al llegar la respuesta guardaríamos los datos con setState, eso haría que el componente se renderice otra vez, y se volvería a hacer la petición y así infinitamente.
+Porque el cuerpo del componente se ejecuta en cada renderizado. Si la petición estuviera ahí, al guardar la respuesta en el estado el componente se renderizaría otra vez y volvería a pedir los datos sin parar. Con useEffect la petición solo se repite cuando cambian sus dependencias, por ejemplo el id en el perfil del trabajador
 
-Con useEffect la petición se hace después de que el componente se pinta y solo se repite si cambia algo del arreglo de dependencias. Por ejemplo, en el perfil del trabajador (TrabajadorDetallePage) usamos [id, token, logout], entonces el perfil solo se vuelve a pedir si cambia el id de la URL o la sesión, y no cada vez que se renderiza la pantalla.
+### ¿Por qué ocultar el botón "Aceptar" a un contratante no es suficiente para proteger la API?
+
+Porque ocultar un botón solo cambia lo que se ve en la pantalla. Cualquiera puede llamar al endpoint directamente con Postman o curl. La protección real está en el backend, que revisa el token y el rol en cada petición y responde 403 o 404 si no tiene permiso
