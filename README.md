@@ -11,7 +11,7 @@ npm install
 npm run dev
 ```
 
-La app queda en `http://localhost:5173`.
+La app se encuentra en `http://localhost:5173`.
 
 ## Estructura
 
@@ -31,7 +31,7 @@ src/modules/
 4. Carla envía una solicitud: ![](docs/evidencias/04a-perfil-formulario.png) ![](docs/evidencias/04b-solicitud-pendiente.png)
 5. Pedro ve Aceptar y Rechazar, y no ve el formulario: ![](docs/evidencias/05a-pedro-solicitudes.png) ![](docs/evidencias/05b-perfil-sin-formulario.png)
 6. Pedro acepta: ![](docs/evidencias/06-aceptada.png)
-7. Carla cancela: ![](docs/evidencias/07-cancelada.png)
+7. Carla cancela: ![](docs/evidencias/07a-carla-aceptada.png) ![](docs/evidencias/07b-cancelada.png)
 8. F5 vuelve al login: ![](docs/evidencias/08-f5-login.png)
 9. Encabezado Authorization: ![](docs/evidencias/09-header-authorization.png)
 
